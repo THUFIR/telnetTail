@@ -1,7 +1,6 @@
 package telnetTail;
 
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -14,7 +13,6 @@ public class Foo {
     public Foo() {
     }
 
-    
     public void readFromInputStream(InputStream inputStream)
             throws IOException {
         StringBuilder resultStringBuilder = new StringBuilder();
@@ -26,27 +24,6 @@ public class Foo {
             }
         }
         log.info(resultStringBuilder.toString());
-    }
-
-    public void bar() {
-        log.info("tail -f /var/log/syslog");
-
-        //File file = new File("/var/log/syslog");
-        File file = new File("/home/thufir/telnet/wuther.log");
-
-        log.info(file.toString());
-        /*
-        Observable<String> newLines
-                = FileObservable.tailer()
-                        .file(file)
-                        .startPosition(file.length())
-                        .sampleTimeMs(1000)
-                        .chunkSize(8192)
-                        .utf8()
-                        .tailText();
-
-        newLines.subscribe(System.out::println);
-         */
     }
 
 }

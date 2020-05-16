@@ -10,7 +10,8 @@ public class App {
     private final static Logger log = Logger.getLogger(App.class.getName());
 
     public static void main(String[] args) throws IOException {
-        InputStream bar = new FileInputStream("/home/thufir/telnet/telnet.log");
+//        InputStream bar = new FileInputStream("/home/thufir/telnet/telnet.log");
+        InputStream bar = new FileInputStream("/var/log/syslog");
         new Foo().readFromInputStream(bar);
     }
 }
