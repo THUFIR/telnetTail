@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.util.Observable;
 import java.util.logging.Logger;
 
 public class FileUtils {
@@ -14,6 +13,7 @@ public class FileUtils {
     public FileUtils() {
     }
 
+    /*
     public void tailLogFile() throws InterruptedException {
         Observable<String> tailer;
         tailer = FileObservable.tailer()
@@ -34,7 +34,7 @@ public class FileUtils {
         );
         Thread.sleep(120000);
     }
-
+     */
     public void readFromInputStream(InputStream inputStream)
             throws IOException {
         StringBuilder resultStringBuilder = new StringBuilder();
