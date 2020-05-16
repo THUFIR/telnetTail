@@ -1,13 +1,16 @@
 package telnetTail;
 
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.logging.Logger;
 
 public class App {
 
     private final static Logger log = Logger.getLogger(App.class.getName());
 
-    
-    public static void main(String[] args) {
-        new Foo().bar();
+    public static void main(String[] args) throws IOException {
+        InputStream bar = new FileInputStream("/home/thufir/telnet/telnet.log");
+        new Foo().readFromInputStream(bar);
     }
 }
