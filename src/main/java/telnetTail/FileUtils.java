@@ -13,28 +13,10 @@ public class FileUtils {
     public FileUtils() {
     }
 
-    /*
     public void tailLogFile() throws InterruptedException {
-        Observable<String> tailer;
-        tailer = FileObservable.tailer()
-                .file("application.log") // absolute path
-                .tailText();
-
-        tailer.subscribe(
-                new Action1<String>() {
-            public void call(String line) {
-                System.out.println("you got line: " + line);
-            }
-        },
-                new Action1<Throwable>() {
-            public void call(Throwable e) {
-                System.out.println("you got error: " + e);
-            }
-        }
-        );
-        Thread.sleep(120000);
+        rx.Observable<String> tailer;
     }
-     */
+
     public void readFromInputStream(InputStream inputStream)
             throws IOException {
         StringBuilder resultStringBuilder = new StringBuilder();
